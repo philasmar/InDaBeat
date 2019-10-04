@@ -1,30 +1,20 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Text;
 
 public class WebUtils
 {
-    public String SendRequestToQRS(SenseEnv env, String method, String api, String jsonBody)
+    public String SendRequestToQRS(String method, String url, String jsonBody)
     {
-        ServicePointManager.ServerCertificateValidationCallback +=
-   (sender, cert, chain, sslPolicyErrors) => true;
-        string url = getAPIUrl(env, api);
-        //Create the HTTP Request and add required headers and content in Xrfkey
-        string Xrfkey = "123456789ABCDEFG";
         HttpWebRequest request;
-        if (url.Contains("?"))
-        {
-            request = (HttpWebRequest)WebRequest.Create(url + "&xrfkey=" + Xrfkey);
-        }
-        else
-        {
-            request = (HttpWebRequest)WebRequest.Create(url + "?xrfkey=" + Xrfkey);
-        }
+        request = (HttpWebRequest)WebRequest.Create(url);
         // Add the method to authentication the user
         request.Method = method;
         request.Accept = "application/json";
-        request.Headers.Add("X-Qlik-xrfkey", Xrfkey);
-        request.Headers.Add("hdr-usr", getUserDirectory() + "\\" + getUserName());
+        request.Headers.Add("Authorization", "Bearer " + Properties.access_token);
         request.ContentLength = jsonBody.Length;
         request.Timeout = 14400000;
         request.KeepAlive = false;
