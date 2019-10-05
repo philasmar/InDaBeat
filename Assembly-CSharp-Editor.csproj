@@ -323,6 +323,18 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack.CssSelectors">
+      <HintPath>/Users/phil/Documents/GitHub/InDaBeat/Assets/Plugins/HtmlAgilityPack.CssSelectors.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>/Users/phil/Documents/GitHub/InDaBeat/Assets/Plugins/HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Fizzler.Systems.HtmlAgilityPack">
+      <HintPath>/Users/phil/Documents/GitHub/InDaBeat/Assets/Plugins/Fizzler.Systems.HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>/Users/phil/Documents/GitHub/InDaBeat/Assets/Plugins/Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>/Users/phil/Documents/GitHub/InDaBeat/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>

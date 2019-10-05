@@ -4,10 +4,59 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
+using HtmlAgilityPack;
+using Newtonsoft.Json;
+using UnityEngine;
+using static LyricResponse;
 
 public class WebUtils
 {
-    public String SendRequestToQRS(String method, String url, String jsonBody)
+    public LyricResponse searchSongs(string song)
+    {
+        try
+        {
+            string response = SendRequestToSpotify("GET", Properties.genius_search_url + song, "");
+            return JsonConvert.DeserializeObject<LyricResponse>(response);
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    public List<string> getTopLyrics(string song)
+    {
+        List<string> lyrics = new List<string>(); 
+        try
+        {
+            string txtResponse = SendRequestToSpotify("GET", Properties.genius_search_url + song, "");
+            LyricResponse response = JsonConvert.DeserializeObject<LyricResponse>(txtResponse);
+            if (response != null)
+            {
+                if (response.response.hits.Count > 0)
+                {
+                    HtmlWeb web = new HtmlWeb();
+                    HtmlDocument doc = web.Load(response.response.hits[0].result.url);
+                    foreach (HtmlNode node in doc.DocumentNode.SelectNodes("//div[@class='lyrics']//p").Elements())
+                    {
+                        if (!string.IsNullOrWhiteSpace(node.InnerHtml))
+                        {
+                            lyrics.Add(node.InnerHtml);
+                        }
+                    }
+                    return lyrics;
+                }
+            }
+            return null;
+        }
+        catch(Exception ex)
+        {
+            Debug.Log(ex.Message);
+            return null;
+        }
+    }
+
+    public string SendRequestToSpotify(String method, String url, String jsonBody)
     {
         HttpWebRequest request;
         request = (HttpWebRequest)WebRequest.Create(url);

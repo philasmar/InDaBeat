@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class LyricResponse
 {
-
     public Meta meta { get; set; }
     public Response response { get; set; }
 
@@ -44,7 +44,7 @@ public class LyricResponse
         public int lyrics_owner_id { get; set; }
         public string lyrics_state { get; set; }
         public string path { get; set; }
-        public int pyongs_count { get; set; }
+        public string pyongs_count { get; set; }
         public string song_art_image_thumbnail_url { get; set; }
         public string song_art_image_url { get; set; }
         public Stats stats { get; set; }

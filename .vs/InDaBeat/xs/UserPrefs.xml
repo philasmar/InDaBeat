@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{1E0F63C9-DEE2-3A59-CAD6-50F698E50A44}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Utilities/WebUtils.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Utilities/Properties.cs">
     <Files>
       <File FileName="Assets/Oculus/SampleFramework/Editor/OculusSampleFrameworkUtil.cs" Line="43" Column="1" />
-      <File FileName="Assets/CubeActions.cs" Line="42" Column="1" />
-      <File FileName="Assets/JSON/LyricResponse.cs" Line="66" Column="6" />
-      <File FileName="Assets/Utilities/WebUtils.cs" Line="23" Column="52" />
-      <File FileName="Assets/Utilities/Properties.cs" Line="7" Column="35" />
+      <File FileName="Assets/CubeActions.cs" Line="37" Column="45" />
+      <File FileName="Assets/JSON/LyricResponse.cs" />
+      <File FileName="Assets/Utilities/WebUtils.cs" Line="27" Column="24" />
+      <File FileName="Assets/Utilities/Properties.cs" Line="9" Column="57" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,9 +19,10 @@
                 </Node>
               </Node>
               <Node name="Utilities" expanded="True">
-                <Node name="WebUtils.cs" selected="True" />
+                <Node name="Properties.cs" selected="True" />
               </Node>
             </Node>
+            <Node name="Packages" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -29,7 +30,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0e2aca90-e619-4fb7-bb51-1e4b40434345" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7366db8b-b82b-4f54-9458-2ba56f295f79" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
