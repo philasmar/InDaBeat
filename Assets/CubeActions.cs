@@ -4,6 +4,7 @@ using UnityEngine;
 using HtmlAgilityPack;
 using static LyricResponse;
 using UnityEngine.UI;
+using System.Text;
 
 public class CubeActions : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class CubeActions : MonoBehaviour
     {
         if (hit.collider.name.Equals("Cube"))
         {
+
             songLyrics = webUtils.getTopLyrics(Properties.songsList[0]);
             if (audio.isPlaying)
             {
@@ -50,7 +52,15 @@ public class CubeActions : MonoBehaviour
             else
             {
                 audio.Play();
+                convertToText();
             }
         }
+    }
+
+    string convertToText()
+    {
+        TextAsset txt = (TextAsset)Resources.Load("Killshot", typeof(TextAsset));
+        Debug.Log(txt.text);
+        return txt.text;
     }
 }
