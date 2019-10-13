@@ -25,7 +25,10 @@ public class CubeActions : MonoBehaviour
         audio = music.GetComponent<AudioSource>();
         webUtils = new WebUtils();
     }
-
+    void OnMouseUp()
+    {
+        Debug.Log("hi");
+    }
     // Update is called once per frame
     void Update()
     {
@@ -38,6 +41,7 @@ public class CubeActions : MonoBehaviour
         }
         if (songLyrics != null)
         {
+            lyrics.text = songLyrics.First().text;
             List<LyricLine> lyr = songLyrics.Where(x => x.time < Convert.ToDouble(audio.time) - 0.5).ToList();
             if(lyr.Count > 0)
             {
@@ -48,7 +52,7 @@ public class CubeActions : MonoBehaviour
 
     void Interact(RaycastHit hit)
     {
-        if (hit.collider.name.Equals("Cube"))
+        if (hit.collider.CompareTag("User"))
         {
             //songLyrics = webUtils.getTopLyrics(Properties.songsList[0]);
             songLyrics = convertToText();
@@ -65,7 +69,7 @@ public class CubeActions : MonoBehaviour
 
     List<LyricLine> convertToText()
     {
-        StreamReader inp_stm = new StreamReader("Assets/Resources/" + Properties.lyricsFile[0] + ".lrc");
+        StreamReader inp_stm = new StreamReader("Assets/Lyrics/" + Properties.lyricsFile[0] + ".lrc");
         List<LyricLine> inp_ln = new List<LyricLine>();
         while (!inp_stm.EndOfStream)
         {
