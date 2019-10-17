@@ -24,6 +24,9 @@ public class CubeActions : MonoBehaviour
     {
         audio = music.GetComponent<AudioSource>();
         webUtils = new WebUtils();
+
+        AudioClip lyric = Resources.Load<AudioClip>("Music/" + Properties.selectedSong);
+        audio.clip = lyric;
     }
     void OnMouseUp()
     {
@@ -32,6 +35,7 @@ public class CubeActions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetMouseButtonUp(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -39,6 +43,15 @@ public class CubeActions : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
                 Interact(hit);
         }
+#else
+        if (Input.touchCount > 0)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+                Interact(hit);
+        }
+#endif
         if (songLyrics != null)
         {
             lyrics.text = songLyrics.First().text;
@@ -69,7 +82,9 @@ public class CubeActions : MonoBehaviour
 
     List<LyricLine> convertToText()
     {
-        StreamReader inp_stm = new StreamReader("Assets/Lyrics/" + Properties.lyricsFile[0] + ".lrc");
+        TextAsset lyric = Resources.Load<TextAsset>("Lyrics/" + Properties.lyricsFile[0]);
+        //StreamReader inp_stm = new StreamReader(Application.dataPath + "/Lyrics/" + Properties.lyricsFile[0] + ".lrc");
+        StreamReader inp_stm = new StreamReader(new MemoryStream(lyric.bytes));
         List<LyricLine> inp_ln = new List<LyricLine>();
         while (!inp_stm.EndOfStream)
         {

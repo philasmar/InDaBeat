@@ -1,39 +1,26 @@
 ﻿<Properties StartupConfiguration="{1E0F63C9-DEE2-3A59-CAD6-50F698E50A44}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerFollow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CubeActions.cs">
     <Files>
-      <File FileName="Assets/Oculus/SampleFramework/Editor/OculusSampleFrameworkUtil.cs" Line="43" Column="1" />
-      <File FileName="Assets/CubeActions.cs" Line="56" Column="10" />
-      <File FileName="Assets/JSON/LyricResponse.cs" Line="1" Column="1" />
-      <File FileName="Assets/Utilities/WebUtils.cs" Line="1" Column="1" />
-      <File FileName="Assets/Utilities/Properties.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/LyricLine.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/RemyAnimController.cs" Line="16" Column="11" />
-      <File FileName="Assets/PlayerFollow.cs" Line="13" Column="21" />
+      <File FileName="Assets/CubeActions.cs" Line="42" Column="6" />
+      <File FileName="Assets/JSON/LyricResponse.cs" />
+      <File FileName="Assets/Utilities/WebUtils.cs" />
+      <File FileName="Assets/Utilities/Properties.cs" />
+      <File FileName="Assets/Scripts/LyricLine.cs" />
+      <File FileName="Assets/Scripts/RemyAnimController.cs" />
+      <File FileName="Assets/PlayerFollow.cs" />
+      <File FileName="Assets/SongSelection.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="InDaBeat" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="JSON" expanded="True" />
-              <Node name="Oculus" expanded="True">
-                <Node name="SampleFramework" expanded="True">
-                  <Node name="Editor" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Scripts" expanded="True" />
-              <Node name="Utilities" expanded="True" />
-              <Node name="PlayerFollow.cs" selected="True" />
-            </Node>
-            <Node name="Packages" expanded="True" />
-          </Node>
+          <Node name="InDaBeat" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d3e6a6f3-3a3c-49fd-b3b2-68a186c973b9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d7541f55-19d6-4ba7-9dd4-0f57a5efefdf" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
