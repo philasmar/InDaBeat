@@ -1,37 +1,12 @@
 fileFormatVersion: 2
-guid: 97f33fc66ca4c4ce294ca9c5857c0149
+guid: 5f90aa9dd46a7441d8f3a3fa1ae24cde
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bodymat
-    second: {fileID: 2100000, guid: 16df49d4e2c14c642b64cde3e3e1472a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bottommat
-    second: {fileID: 2100000, guid: 0b08661b80daee147a36d8760abe687d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Hairmat
-    second: {fileID: 2100000, guid: d0455a0ebc21e4c758037cb4b82bebd2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Shoesmat
-    second: {fileID: 2100000, guid: a6f1778430eac934d8d2b1514f4b023f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Topmat
-    second: {fileID: 2100000, guid: 0ad01ecbcffbb4c91af7ffa1ebc14f74, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - User
-  - Song
+  - Bullet
+  - LHandAnchor
+  - RHandAnchor
   layers:
   - Default
   - TransparentFX
